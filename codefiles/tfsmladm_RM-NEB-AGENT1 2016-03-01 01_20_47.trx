@@ -1,0 +1,1421 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b84d751f-db94-4569-ae6c-a353d6d6017f" name="tfsmladm@RM-NEB-AGENT1 2016-03-01 01:20:47" runUser="REDMOND\tfsmladm" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2016-03-01T01:20:47.8943626-08:00" queuing="2016-03-01T01:20:47.8943626-08:00" start="2016-03-01T01:20:47.8943626-08:00" finish="2016-03-01T01:20:47.9412138-08:00" />
+  <TestSettings name="default" id="8ebfe9cc-376f-4852-9202-a2a66d9be807">
+    <Execution>
+      <TestTypeSpecific />
+    </Execution>
+    <Deployment runDeploymentRoot="tfsmladm_RM-NEB-AGENT1 2016-03-01 01_20_47" />
+    <Properties />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="70b15f79-46e1-4dac-bf2f-f2d877bf5cc0" testId="6054fcf7-b60e-7ce3-51c3-e7faf1e77a0b" testName="CreateReleaseDefinitionAndTriggerRelease" computerName="RM-NEB-AGENT1" duration="00:00:01.0817034" startTime="2016-03-01T01:20:33.9719066-08:00" endTime="2016-03-01T01:20:36.3783113-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70b15f79-46e1-4dac-bf2f-f2d877bf5cc0">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  The Test Environment file pointed to by environment variable, TestEnvironmentFile, does not exist: 
+00:00.000  Test environment C:\Users\tfsmladm\AppData\Local\Temp\TestResults_51836c93-24c0-40b9-a1ab-29000e76c17a\tfsmladm_RM-NEB-AGENT1 2016-03-01 01_20_21\Out\TestEnvironment.xml will be used for this run.
+00:00.000  Loading test inputs from file: C:\Users\tfsmladm\AppData\Local\Temp\TestResults_51836c93-24c0-40b9-a1ab-29000e76c17a\tfsmladm_RM-NEB-AGENT1 2016-03-01 01_20_21\Out\TestEnvironment.xml
+00:00.015  Performing TraTestBase Initialize...
+00:00.015  Test Start: 3/1/2016 1:20:35 AM (local) / 3/1/2016 9:20:35 AM (UTC)
+00:00.015  Random Seed for this test: -1328982123
+00:00.015  The Test Environment file pointed to by environment variable, TestEnvironmentFile, does not exist: 
+00:00.015  Test environment C:\Users\tfsmladm\AppData\Local\Temp\TestResults_51836c93-24c0-40b9-a1ab-29000e76c17a\tfsmladm_RM-NEB-AGENT1 2016-03-01 01_20_21\Out\TestEnvironment.xml will be used for this run.
+00:00.015  Loading test inputs from file: C:\Users\tfsmladm\AppData\Local\Temp\TestResults_51836c93-24c0-40b9-a1ab-29000e76c17a\tfsmladm_RM-NEB-AGENT1 2016-03-01 01_20_21\Out\TestEnvironment.xml
+00:00.031  Use settings from LightRail for missing settings if a LightRailDrive was provided.
+00:00.031  useSettingProvider: False
+00:00.046  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.046  Created new TimeoutScope, 'Test Method: CreateReleaseDefinitionAndTriggerRelease', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionAndTriggerRelease' with id 'c9d84980-56db-42bc-8f71-1c65b9631fe0'
+00:00.046  TimeoutScope, 'Test Method: CreateReleaseDefinitionAndTriggerRelease', has been pushed.
+00:00.125  Set the default web browser for tests to: Chrome.
+00:00.140  Getting web automation agent for browser: Chrome.
+00:00.140  Browser type Chrome is already installed
+00:00.859  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.984  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionAndTriggerRelease0000.jpg
+00:00.984  TimeoutScope, 'Test Method: CreateReleaseDefinitionAndTriggerRelease', has been popped.
+00:00.984  Performing TraTestBase Cleanup...
+00:01.015  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionAndTriggerRelease0001.jpg
+00:01.015  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionAndTriggerRelease' with id 'c9d84980-56db-42bc-8f71-1c65b9631fe0'
+00:01.015  TimeoutScope, 'TestCleanup', has been pushed.
+00:01.031  
+00:01.031  ---------------------------------------------------------------------------
+00:01.031  *** Performing test cleanup for web testcase ***
+00:01.031  ---------------------------------------------------------------------------
+00:01.031  
+00:01.031  Getting web automation agent for browser: Chrome.
+00:01.031  Browser type Chrome is already installed
+00:01.031  TimeoutScope, 'TestCleanup', has been popped.
+00:01.031  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:01.031  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b7e93983-68d4-4e81-8bdc-a2a9ede7e028" testId="244deb55-bf7f-7403-95c7-28f36506c139" testName="TriggerReleaseAndValidateLiveLogs" computerName="RM-NEB-AGENT1" duration="00:00:00.1157112" startTime="2016-03-01T01:20:36.3783113-08:00" endTime="2016-03-01T01:20:36.5033147-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7e93983-68d4-4e81-8bdc-a2a9ede7e028">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:36 AM (local) / 3/1/2016 9:20:36 AM (UTC)
+00:00.000  Random Seed for this test: -1317731383
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: TriggerReleaseAndValidateLiveLogs', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'TriggerReleaseAndValidateLiveLogs' with id '8977d1db-71de-4620-8d1d-f2a2c4816c5c'
+00:00.000  TimeoutScope, 'Test Method: TriggerReleaseAndValidateLiveLogs', has been pushed.
+00:00.015  Set the default web browser for tests to: Chrome.
+00:00.015  Getting web automation agent for browser: Chrome.
+00:00.015  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.046  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\TriggerReleaseAndValidateLiveLogs0000.jpg
+00:00.062  TimeoutScope, 'Test Method: TriggerReleaseAndValidateLiveLogs', has been popped.
+00:00.062  Performing TraTestBase Cleanup...
+00:00.109  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\TriggerReleaseAndValidateLiveLogs0001.jpg
+00:00.109  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'TriggerReleaseAndValidateLiveLogs' with id '8977d1db-71de-4620-8d1d-f2a2c4816c5c'
+00:00.109  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.109  
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  *** Performing test cleanup for web testcase ***
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  
+00:00.109  Getting web automation agent for browser: Chrome.
+00:00.109  Browser type Chrome is already installed
+00:00.125  TimeoutScope, 'TestCleanup', has been popped.
+00:00.125  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.125  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="09c8339c-cf74-44ac-b56a-cb45c28a2bb4" testId="610b119c-60ec-a187-bab4-194852d8252a" testName="ValidateTestResultsReportInRelease" computerName="RM-NEB-AGENT1" duration="00:00:08.3508567" startTime="2016-03-01T01:20:36.5033147-08:00" endTime="2016-03-01T01:20:44.8630331-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09c8339c-cf74-44ac-b56a-cb45c28a2bb4">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:36 AM (local) / 3/1/2016 9:20:36 AM (UTC)
+00:00.000  Random Seed for this test: -1316481349
+00:00.015  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.015  Created new TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:00.015  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been pushed.
+00:00.046  Created new AssemblyResolver instance for paths: {Tfs  True}
+00:00.078  AzurePackageATWebServicesBin: 'C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Web Services\bin'
+00:00.078  ProductPluginDirectory: 'C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Web Services\bin\Plugins'
+00:00.640  Attempting to resolve assembly: mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+00:00.640  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:00.640  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:00.640  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:00.640  Attempting to resolve mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 by traversing through resolution path: C:\Program Files\Microsoft Team Foundation Server 15.0.
+00:02.359  Attempting to resolve mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 by traversing through resolution path: C:\Program Files\Microsoft Team Foundation Server 15.0.
+00:02.641  Failed to obtain value 'InstallDir' in the registry key 'SOFTWARE\Microsoft\VisualStudio\15.0' under hive 'LocalMachine' in machine 'RM-NEB-AGENT1'.
+00:02.641  Failed to resolve TfsRequiredResolutionPath 'Common7IDECommonExtTeamExp': System.InvalidOperationException: The registry key 'SOFTWARE\Microsoft\VisualStudio\15.0' does not exist under hive 'HKEY_LOCAL_MACHINE' in machine 'RM-NEB-AGENT1'.
+             at Common.TestFramework.Legacy.Utilities.MachineInfo.GetRegistryKeyValue(String machineName, RegistryHive hive, String subkeyPath, String name, RegistryView view) in C:\_work\1\s\TestFramework\Libraries\Utilities\Configuration\MachineInfo.cs:line 874
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetTfcInstallPath(String machineName) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 403
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetRootPath(String machineName, CommonResolutionFolders folder, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 155
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetRootPath(String machineName, CommonResolutionFolders folder, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 168
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetPath(String machineName, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 108
+             at MS.TF.Test.Vss.AssemblyResolver.TryResolveUsingPath(AssemblyName assemblyName, TfsRequiredResolutionPath resolutionPath, Boolean fillCache, Assembly&amp; assembly) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\AssemblyResolver.cs:line 271
+00:02.641  Failed to obtain value 'InstallDir' in the registry key 'SOFTWARE\Microsoft\VisualStudio\15.0' under hive 'LocalMachine' in machine 'RM-NEB-AGENT1'.
+00:02.641  Failed to resolve TfsRequiredResolutionPath 'Common7IDECommonExtTeamExp': System.InvalidOperationException: The registry key 'SOFTWARE\Microsoft\VisualStudio\15.0' does not exist under hive 'HKEY_LOCAL_MACHINE' in machine 'RM-NEB-AGENT1'.
+             at Common.TestFramework.Legacy.Utilities.MachineInfo.GetRegistryKeyValue(String machineName, RegistryHive hive, String subkeyPath, String name, RegistryView view) in C:\_work\1\s\TestFramework\Libraries\Utilities\Configuration\MachineInfo.cs:line 874
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetTfcInstallPath(String machineName) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 403
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetRootPath(String machineName, CommonResolutionFolders folder, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 155
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetRootPath(String machineName, CommonResolutionFolders folder, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 168
+             at MS.TF.Test.Vss.TfsRequiredResolutionPath.GetPath(String machineName, Boolean isHostedDeployment) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\RequiredResolutionPathAttribute.cs:line 108
+             at MS.TF.Test.Vss.AssemblyResolver.TryResolveUsingPath(AssemblyName assemblyName, TfsRequiredResolutionPath resolutionPath, Boolean fillCache, Assembly&amp; assembly) in C:\_work\1\s\Vssf\SdkTests\Libraries\Vss\AssemblyResolution\AssemblyResolver.cs:line 271
+00:02.641  Assembly mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 could not be resolved.
+00:02.641  TimeoutScope, 'Resolve assemblies', has been popped.
+00:02.641  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:02.0003412
+00:02.641  Attempting to resolve assembly: mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+00:02.641  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:02.641  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:02.641  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:02.656  Attempting to resolve mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 by traversing through resolution path: C:\Program Files\Microsoft Team Foundation Server 15.0.
+00:02.937  Attempting to resolve mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 by traversing through resolution path: C:\Program Files\Microsoft Team Foundation Server 15.0.
+00:03.172  Assembly mscorlib.XmlSerializers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 could not be resolved.
+00:03.172  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.172  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.5310535
+00:03.406  Attempting to resolve assembly: System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:03.406  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:03.406  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:03.406  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.422  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\System.Web.Http.dll
+00:03.422  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.422  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.0156306
+00:03.437  Attempting to resolve assembly: Microsoft.VisualStudio.Services.DelegatedAuthorization
+00:03.437  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.437  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.453  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.DelegatedAuthorization.dll
+00:03.453  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.453  Attempting to resolve assembly: Microsoft.VisualStudio.Services.DelegatedAuthorization
+00:03.453  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.453  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.453  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.DelegatedAuthorization.dll
+00:03.453  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.515  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Identity
+00:03.515  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.515  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.593  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.VisualStudio.Services.Identity.dll
+00:03.593  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.593  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Identity
+00:03.593  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.593  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.593  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.VisualStudio.Services.Identity.dll
+00:03.593  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.593  Attempting to resolve assembly: Microsoft.TeamFoundation.DistributedTask.Server
+00:03.593  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.593  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.609  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.DistributedTask.Server.dll
+00:03.609  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.609  Attempting to resolve assembly: Microsoft.TeamFoundation.DistributedTask.Server
+00:03.609  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:03.609  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.609  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.DistributedTask.Server.dll
+00:03.609  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.750  Attempting to resolve assembly: System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:03.750  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:03.750  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:03.750  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:03.765  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\System.Web.Http.WebHost.dll
+00:03.765  TimeoutScope, 'Resolve assemblies', has been popped.
+00:03.765  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.0156850
+00:04.797  Attempting to resolve assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.797  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.797  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.797  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.dll
+00:04.797  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.797  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Orchestration.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.797  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.797  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.812  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.Orchestration.Server.dll
+00:04.812  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.812  Attempting to resolve assembly: Microsoft.VisualStudio.Services.MachineManagement.Framework.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.812  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.812  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.812  Assembly Microsoft.VisualStudio.Services.MachineManagement.Framework.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:04.812  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.812  Attempting to resolve assembly: Microsoft.VisualStudio.Services.MachineManagement.Framework.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.812  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.812  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.812  Assembly Microsoft.VisualStudio.Services.MachineManagement.Framework.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:04.812  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.875  Attempting to resolve assembly: Microsoft.VisualStudio.Services.CodeReview.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.875  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.875  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.875  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.CodeReview.Server.dll
+00:04.875  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.906  Attempting to resolve assembly: Microsoft.VisualStudio.Services.SecurityRoles.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.906  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:04.906  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:04.906  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.906  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.SecurityRoles.Server.dll
+00:04.906  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.906  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:04.906  Attempting to resolve assembly: Microsoft.VisualStudio.Services.CodeReview.Discussion.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.906  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.906  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.922  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.CodeReview.Discussion.Server.dll
+00:04.922  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.922  Attempting to resolve assembly: Microsoft.TeamFoundation.Git.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.922  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.922  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.937  Attempting to resolve assembly: Microsoft.VisualStudio.Services.ReleaseManagement2.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.937  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:04.937  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:04.937  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.937  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.ReleaseManagement2.Data.dll
+00:04.937  TimeoutScope, 'Resolve assemblies', has been popped.
+00:04.937  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:04.953  Attempting to resolve assembly: Microsoft.TeamFoundation.Server.WebAccess.Platform, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:04.953  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:04.953  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:04.953  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:04.984  Attempting to resolve assembly: System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:04.984  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:04.984  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.062  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Git.Server.dll
+00:05.062  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.094  Attempting to resolve assembly: Microsoft.TeamFoundation.Ssh.Server.Core, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.094  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.094  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.094  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Ssh.Server.Core.dll
+00:05.094  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.094  Attempting to resolve assembly: Microsoft.TeamFoundation.Lab.Model, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.094  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.094  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.094  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.Lab.Model.dll
+00:05.094  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.125  Attempting to resolve assembly: Microsoft.TeamFoundation.Lab.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.125  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.125  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.125  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.Lab.Common.dll
+00:05.125  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.140  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll
+00:05.140  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.140  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.1875146
+00:05.156  Attempting to resolve assembly: Microsoft.ServiceBus, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:05.156  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:05.156  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:05.156  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.156  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.ServiceBus.dll
+00:05.156  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.156  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:05.156  Attempting to resolve assembly: System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:05.156  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.156  TimeoutScope, 'Resolve assemblies', has been paused.
+00:05.156  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.234  Attempting to resolve assembly: Microsoft.TeamFoundation.Charting.WebApi, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.234  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.234  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.234  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.Charting.WebApi.dll
+00:05.234  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.250  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\System.Web.Razor.dll
+00:05.250  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.250  TimeoutScope, 'Resolve assemblies', has been resumed.  Time adjusted by: 00:00:00.0941639
+00:05.250  Resolved assembly from cache at location: C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Mvc\v4.0_4.0.0.1__31bf3856ad364e35\System.Web.Mvc.dll
+00:05.250  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.312  Attempting to resolve assembly: Microsoft.TeamFoundation.Server.WebAccess, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.312  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.312  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.328  Attempting to resolve assembly: Microsoft.TeamFoundation.Build2.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.328  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.328  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.359  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Server.WebAccess.dll
+00:05.359  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.375  Attempting to resolve assembly: Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.375  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.375  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.390  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Build2.Server.dll
+00:05.390  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.390  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.dll
+00:05.390  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.390  Attempting to resolve assembly: Microsoft.VisualStudio.Services.SignalR, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.390  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.390  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.390  Attempting to resolve assembly: Microsoft.TeamFoundation.Build.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.390  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.390  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.390  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.SignalR.dll
+00:05.390  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.422  Attempting to resolve assembly: Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.422  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.422  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.437  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll
+00:05.437  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.500  Attempting to resolve assembly: Microsoft.TeamFoundation.Build.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.500  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.500  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.562  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Build.Server.dll
+00:05.562  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.562  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Build.Server.dll
+00:05.562  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.562  Attempting to resolve assembly: Microsoft.TeamFoundation.TestManagement.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.562  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.562  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.562  Attempting to resolve assembly: Microsoft.TeamFoundation.VersionControl.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.562  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.562  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.562  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.TestManagement.Server.dll
+00:05.562  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.578  Attempting to resolve assembly: Microsoft.TeamFoundation.TestManagement.TestExecutionService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.578  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.578  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.578  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.TestManagement.TestExecutionService.dll
+00:05.578  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.625  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Cloud.Extensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.625  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.625  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.625  Assembly Microsoft.VisualStudio.Services.Cloud.Extensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:05.625  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.625  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Cloud.Extensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:05.625  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:05.625  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:05.625  Assembly Microsoft.VisualStudio.Services.Cloud.Extensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:05.625  TimeoutScope, 'Resolve assemblies', has been popped.
+00:05.812  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.VersionControl.Server.dll
+00:05.812  TimeoutScope, 'Resolve assemblies', has been popped.
+00:06.594  Attempting to resolve assembly: Microsoft.CodeAnalysis.CSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:06.594  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:06.594  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:06.672  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+00:06.672  TimeoutScope, 'Resolve assemblies', has been popped.
+00:06.750  Attempting to resolve assembly: Microsoft.CodeAnalysis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:06.750  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:06.750  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:06.781  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\roslyn\Microsoft.CodeAnalysis.dll
+00:06.781  TimeoutScope, 'Resolve assemblies', has been popped.
+00:06.922  Attempting to resolve assembly: Microsoft.CodeAnalysis.VisualBasic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+00:06.922  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:06.922  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:06.922  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.CodeAnalysis.VisualBasic.dll
+00:06.922  TimeoutScope, 'Resolve assemblies', has been popped.
+00:06.937  Attempting to resolve assembly: Microsoft.TeamFoundation.Admin.Engine, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:06.937  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:06.937  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:06.937  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.TeamFoundation.Admin.Engine.dll
+00:06.937  TimeoutScope, 'Resolve assemblies', has been popped.
+00:06.984  Attempting to resolve assembly: Microsoft.TeamFoundation.ConnectedService.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:06.984  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: 
+00:06.984  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:06.984  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Web Services\bin\Microsoft.TeamFoundation.ConnectedService.Server.dll
+00:06.984  TimeoutScope, 'Resolve assemblies', has been popped.
+00:07.594  Attempting to resolve assembly: Microsoft.TeamFoundation.Admin.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:07.594  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:07.594  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:07.594  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:07.625  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\Message Queue\bin\Microsoft.TeamFoundation.Admin.Common.dll
+00:07.625  TimeoutScope, 'Resolve assemblies', has been popped.
+00:07.625  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.0312504
+00:07.672  Attempting to resolve assembly: Microsoft.TeamFoundation.Framework.Server.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:07.672  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:07.672  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:07.672  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:07.672  Assembly Microsoft.TeamFoundation.Framework.Server.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:07.672  TimeoutScope, 'Resolve assemblies', has been popped.
+00:07.672  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:07.672  Attempting to resolve assembly: Microsoft.TeamFoundation.Framework.Server.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:07.672  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:07.672  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:07.672  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:07.672  Assembly Microsoft.TeamFoundation.Framework.Server.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:07.672  TimeoutScope, 'Resolve assemblies', has been popped.
+00:07.672  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.015  Attempting to resolve assembly: Microsoft.VisualStudio.Services.ReleaseManagement2.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.015  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.015  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.015  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.031  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.ReleaseManagement2.Server.dll
+00:08.031  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.031  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00.0156251
+00:08.062  Attempting to resolve assembly: Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.062  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.062  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.062  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.062  Assembly Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:08.062  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.062  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.062  Attempting to resolve assembly: Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.062  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.062  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.062  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.062  Assembly Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:08.062  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.062  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.094  Attempting to resolve assembly: Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.094  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.094  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.094  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.094  Assembly Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:08.094  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.094  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.094  Attempting to resolve assembly: Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.094  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.094  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.094  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.094  Assembly Microsoft.TeamFoundation.VersionControl.Common.Integration.XmlSerializers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a could not be resolved.
+00:08.094  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.094  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.125  Attempting to resolve assembly: Microsoft.TeamFoundation.Warehouse, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.125  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.125  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.125  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.125  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Plugins\Microsoft.TeamFoundation.Warehouse.dll
+00:08.125  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.125  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.140  Attempting to resolve assembly: Microsoft.VisualStudio.Services.Gallery.Types.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+00:08.140  Created new TimeoutScope, 'Resolve assemblies', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.140  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been paused.
+00:08.140  TimeoutScope, 'Resolve assemblies', has been pushed.
+00:08.140  Resolved assembly from cache at location: C:\Program Files\Microsoft Team Foundation Server 15.0\Application Tier\TFSJobAgent\Microsoft.VisualStudio.Services.Gallery.Types.Server.dll
+00:08.140  TimeoutScope, 'Resolve assemblies', has been popped.
+00:08.140  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been resumed.  Time adjusted by: 00:00:00
+00:08.234  Retry succeeded after 1 tries and time of 00:00:00.0156254.
+00:08.250  Set the default web browser for tests to: Chrome.
+00:08.250  Getting web automation agent for browser: Chrome.
+00:08.250  Browser type Chrome is already installed
+00:08.250  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:08.312  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ValidateTestResultsReportInRelease0000.jpg
+00:08.312  TimeoutScope, 'Test Method: ValidateTestResultsReportInRelease', has been popped.
+00:08.312  Performing TraTestBase Cleanup...
+00:08.344  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ValidateTestResultsReportInRelease0001.jpg
+00:08.344  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ValidateTestResultsReportInRelease' with id '66ba7be2-51d1-4653-b39c-df102a910b8f'
+00:08.344  TimeoutScope, 'TestCleanup', has been pushed.
+00:08.344  
+00:08.344  ---------------------------------------------------------------------------
+00:08.344  *** Performing test cleanup for web testcase ***
+00:08.344  ---------------------------------------------------------------------------
+00:08.344  
+00:08.344  Getting web automation agent for browser: Chrome.
+00:08.344  Browser type Chrome is already installed
+00:08.359  TimeoutScope, 'TestCleanup', has been popped.
+00:08.359  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:08.359  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3321c58a-ba36-46df-bfcb-4f5f505103ff" testId="c9aca54b-76bd-5535-8bb2-eda60aba1752" testName="ApproveAnApprovalInReleaseTest" computerName="RM-NEB-AGENT1" duration="00:00:00.1026132" startTime="2016-03-01T01:20:44.8630331-08:00" endTime="2016-03-01T01:20:44.9723843-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3321c58a-ba36-46df-bfcb-4f5f505103ff">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:44 AM (local) / 3/1/2016 9:20:44 AM (UTC)
+00:00.000  Random Seed for this test: -1232884165
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: ApproveAnApprovalInReleaseTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'ApproveAnApprovalInReleaseTest' with id '4ae0e993-8a6e-44d6-a12d-2c9fb40d806e'
+00:00.000  TimeoutScope, 'Test Method: ApproveAnApprovalInReleaseTest', has been pushed.
+00:00.015  Set the default web browser for tests to: Chrome.
+00:00.015  Getting web automation agent for browser: Chrome.
+00:00.015  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.062  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ApproveAnApprovalInReleaseTest0000.jpg
+00:00.062  TimeoutScope, 'Test Method: ApproveAnApprovalInReleaseTest', has been popped.
+00:00.062  Performing TraTestBase Cleanup...
+00:00.093  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ApproveAnApprovalInReleaseTest0001.jpg
+00:00.109  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ApproveAnApprovalInReleaseTest' with id '4ae0e993-8a6e-44d6-a12d-2c9fb40d806e'
+00:00.109  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.109  
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  *** Performing test cleanup for web testcase ***
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  
+00:00.109  Getting web automation agent for browser: Chrome.
+00:00.109  Browser type Chrome is already installed
+00:00.109  TimeoutScope, 'TestCleanup', has been popped.
+00:00.109  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.109  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="588a51f4-8eed-4693-9280-49d622e0171e" testId="fe6009e1-ca3b-7dab-6eae-7a1a38ce744e" testName="CreateReleaseDefinitionEditPermissionsTest" computerName="RM-NEB-AGENT1" duration="00:00:00.1034476" startTime="2016-03-01T01:20:44.9723843-08:00" endTime="2016-03-01T01:20:45.0817651-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="588a51f4-8eed-4693-9280-49d622e0171e">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:44 AM (local) / 3/1/2016 9:20:44 AM (UTC)
+00:00.000  Random Seed for this test: -1231790653
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: CreateReleaseDefinitionEditPermissionsTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionEditPermissionsTest' with id 'ff00e421-1200-4b96-8dc2-fdff1b01e885'
+00:00.000  TimeoutScope, 'Test Method: CreateReleaseDefinitionEditPermissionsTest', has been pushed.
+00:00.015  Set the default web browser for tests to: Chrome.
+00:00.015  Getting web automation agent for browser: Chrome.
+00:00.015  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.046  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionEditPermissionsTest0000.jpg
+00:00.046  TimeoutScope, 'Test Method: CreateReleaseDefinitionEditPermissionsTest', has been popped.
+00:00.046  Performing TraTestBase Cleanup...
+00:00.109  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionEditPermissionsTest0001.jpg
+00:00.109  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionEditPermissionsTest' with id 'ff00e421-1200-4b96-8dc2-fdff1b01e885'
+00:00.109  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.109  
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  *** Performing test cleanup for web testcase ***
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  
+00:00.109  Getting web automation agent for browser: Chrome.
+00:00.109  Browser type Chrome is already installed
+00:00.109  TimeoutScope, 'TestCleanup', has been popped.
+00:00.109  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.109  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a9652f65-2ddd-48e1-a8f8-8cdefeaf25d2" testId="10bfe2d8-a5dc-4ef4-5093-a922dcb51b13" testName="CreateReleaseDefinitionWithSecretVariablesTest" computerName="RM-NEB-AGENT1" duration="00:00:00.1070783" startTime="2016-03-01T01:20:45.0817651-08:00" endTime="2016-03-01T01:20:45.1915266-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9652f65-2ddd-48e1-a8f8-8cdefeaf25d2">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:45 AM (local) / 3/1/2016 9:20:45 AM (UTC)
+00:00.000  Random Seed for this test: -1230696845
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: CreateReleaseDefinitionWithSecretVariablesTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionWithSecretVariablesTest' with id '702ff489-2d2e-4b6d-b7fc-c79168b50552'
+00:00.000  TimeoutScope, 'Test Method: CreateReleaseDefinitionWithSecretVariablesTest', has been pushed.
+00:00.016  Set the default web browser for tests to: Chrome.
+00:00.016  Getting web automation agent for browser: Chrome.
+00:00.016  Browser type Chrome is already installed
+00:00.016  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.046  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionWithSecretVariablesTest0000.jpg
+00:00.046  TimeoutScope, 'Test Method: CreateReleaseDefinitionWithSecretVariablesTest', has been popped.
+00:00.046  Performing TraTestBase Cleanup...
+00:00.109  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\CreateReleaseDefinitionWithSecretVariablesTest0001.jpg
+00:00.109  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'CreateReleaseDefinitionWithSecretVariablesTest' with id '702ff489-2d2e-4b6d-b7fc-c79168b50552'
+00:00.109  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.109  
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  *** Performing test cleanup for web testcase ***
+00:00.109  ---------------------------------------------------------------------------
+00:00.109  
+00:00.109  Getting web automation agent for browser: Chrome.
+00:00.109  Browser type Chrome is already installed
+00:00.109  TimeoutScope, 'TestCleanup', has been popped.
+00:00.109  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.109  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="441aeb35-602d-4e95-a300-966debabfcad" testId="e5c27335-3bf1-b69d-687a-4474d6f4b458" testName="DynamicDropdownAzureServiceConnectionTest" computerName="RM-NEB-AGENT1" duration="00:00:00.0976967" startTime="2016-03-01T01:20:45.2067677-08:00" endTime="2016-03-01T01:20:45.3005753-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="441aeb35-602d-4e95-a300-966debabfcad">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:45 AM (local) / 3/1/2016 9:20:45 AM (UTC)
+00:00.000  Random Seed for this test: -1229446819
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: DynamicDropdownAzureServiceConnectionTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'DynamicDropdownAzureServiceConnectionTest' with id '0995dc64-8d63-439f-a856-8f1f7c05f6c1'
+00:00.000  TimeoutScope, 'Test Method: DynamicDropdownAzureServiceConnectionTest', has been pushed.
+00:00.000  Set the default web browser for tests to: Chrome.
+00:00.000  Getting web automation agent for browser: Chrome.
+00:00.000  Browser type Chrome is already installed
+00:00.000  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.031  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\DynamicDropdownAzureServiceConnectionTest0000.jpg
+00:00.031  TimeoutScope, 'Test Method: DynamicDropdownAzureServiceConnectionTest', has been popped.
+00:00.031  Performing TraTestBase Cleanup...
+00:00.078  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\DynamicDropdownAzureServiceConnectionTest0001.jpg
+00:00.078  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'DynamicDropdownAzureServiceConnectionTest' with id '0995dc64-8d63-439f-a856-8f1f7c05f6c1'
+00:00.078  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.078  
+00:00.078  ---------------------------------------------------------------------------
+00:00.078  *** Performing test cleanup for web testcase ***
+00:00.078  ---------------------------------------------------------------------------
+00:00.078  
+00:00.078  Getting web automation agent for browser: Chrome.
+00:00.078  Browser type Chrome is already installed
+00:00.093  TimeoutScope, 'TestCleanup', has been popped.
+00:00.093  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.093  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c388474c-f61c-49e4-bf13-638f1ff97cd4" testId="aeaffe61-40f6-6661-5923-66e5d64894ac" testName="DeployPopupInReleaseSummaryPageTest" computerName="RM-NEB-AGENT1" duration="00:00:00.1507933" startTime="2016-03-01T01:20:45.3005753-08:00" endTime="2016-03-01T01:20:45.4567849-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c388474c-f61c-49e4-bf13-638f1ff97cd4">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:45 AM (local) / 3/1/2016 9:20:45 AM (UTC)
+00:00.000  Random Seed for this test: -1228508743
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: DeployPopupInReleaseSummaryPageTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'DeployPopupInReleaseSummaryPageTest' with id '2e059576-21d1-4b1e-b3f6-6c141f44dd01'
+00:00.000  TimeoutScope, 'Test Method: DeployPopupInReleaseSummaryPageTest', has been pushed.
+00:00.015  Set the default web browser for tests to: Chrome.
+00:00.015  Getting web automation agent for browser: Chrome.
+00:00.015  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.078  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\DeployPopupInReleaseSummaryPageTest0000.jpg
+00:00.078  TimeoutScope, 'Test Method: DeployPopupInReleaseSummaryPageTest', has been popped.
+00:00.078  Performing TraTestBase Cleanup...
+00:00.140  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\DeployPopupInReleaseSummaryPageTest0001.jpg
+00:00.140  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'DeployPopupInReleaseSummaryPageTest' with id '2e059576-21d1-4b1e-b3f6-6c141f44dd01'
+00:00.140  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.140  
+00:00.140  ---------------------------------------------------------------------------
+00:00.140  *** Performing test cleanup for web testcase ***
+00:00.140  ---------------------------------------------------------------------------
+00:00.140  
+00:00.140  Getting web automation agent for browser: Chrome.
+00:00.140  Browser type Chrome is already installed
+00:00.140  TimeoutScope, 'TestCleanup', has been popped.
+00:00.156  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.156  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="40d1670d-104e-4945-8535-2c31077d9bf1" testId="01dbea9d-31f0-9bbd-2947-a4790768bd0d" testName="ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest" computerName="RM-NEB-AGENT1" duration="00:00:00.1772296" startTime="2016-03-01T01:20:45.4724085-08:00" endTime="2016-03-01T01:20:45.6442841-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40d1670d-104e-4945-8535-2c31077d9bf1">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:45 AM (local) / 3/1/2016 9:20:45 AM (UTC)
+00:00.000  Random Seed for this test: -1226790411
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest' with id '919ae992-2e75-4f96-92cf-589effbdca55'
+00:00.000  TimeoutScope, 'Test Method: ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest', has been pushed.
+00:00.000  Set the default web browser for tests to: Chrome.
+00:00.000  Getting web automation agent for browser: Chrome.
+00:00.000  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.093  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest0000.jpg
+00:00.093  TimeoutScope, 'Test Method: ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest', has been popped.
+00:00.093  Performing TraTestBase Cleanup...
+00:00.156  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest0001.jpg
+00:00.156  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest' with id '919ae992-2e75-4f96-92cf-589effbdca55'
+00:00.156  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.156  
+00:00.156  ---------------------------------------------------------------------------
+00:00.156  *** Performing test cleanup for web testcase ***
+00:00.156  ---------------------------------------------------------------------------
+00:00.156  
+00:00.156  Getting web automation agent for browser: Chrome.
+00:00.156  Browser type Chrome is already installed
+00:00.171  TimeoutScope, 'TestCleanup', has been popped.
+00:00.171  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.171  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3566ff73-e666-4607-b928-091a35e48777" testId="6d78c496-4905-c1b4-c2da-6645dd546d2a" testName="ArtifactPickerE2ETest" computerName="RM-NEB-AGENT1" duration="00:00:00.1737112" startTime="2016-03-01T01:20:45.6599086-08:00" endTime="2016-03-01T01:20:45.8319475-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3566ff73-e666-4607-b928-091a35e48777">
+      <Output>
+        <StdOut>Debug Trace:
+00:00.000  Performing TraTestBase Initialize...
+00:00.000  Test Start: 3/1/2016 1:20:45 AM (local) / 3/1/2016 9:20:45 AM (UTC)
+00:00.000  Random Seed for this test: -1224915410
+00:00.000  Created new AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.000  Created new TimeoutScope, 'Test Method: ArtifactPickerE2ETest', for 00:10:00.  Thread Name: Agent: adapter run thread for test 'ArtifactPickerE2ETest' with id '0f0716b8-4380-4d22-aa2f-048bb0e52582'
+00:00.000  TimeoutScope, 'Test Method: ArtifactPickerE2ETest', has been pushed.
+00:00.000  Set the default web browser for tests to: Chrome.
+00:00.000  Getting web automation agent for browser: Chrome.
+00:00.000  Browser type Chrome is already installed
+00:00.015  
+          
+          Failure 0:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+             at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185
+          
+00:00.093  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ArtifactPickerE2ETest0002.jpg
+00:00.093  TimeoutScope, 'Test Method: ArtifactPickerE2ETest', has been popped.
+00:00.093  Performing TraTestBase Cleanup...
+00:00.156  [Screenshot] file:///\\RM-NEB-AGENT1\C$\Users\tfsmladm\AppData\Local\Temp\TFSQA\Screenshots\ArtifactPickerE2ETest0003.jpg
+00:00.156  Created new TimeoutScope, 'TestCleanup', for 00:05:00.  Thread Name: Agent: adapter run thread for test 'ArtifactPickerE2ETest' with id '0f0716b8-4380-4d22-aa2f-048bb0e52582'
+00:00.156  TimeoutScope, 'TestCleanup', has been pushed.
+00:00.156  
+00:00.156  ---------------------------------------------------------------------------
+00:00.156  *** Performing test cleanup for web testcase ***
+00:00.156  ---------------------------------------------------------------------------
+00:00.156  
+00:00.156  Getting web automation agent for browser: Chrome.
+00:00.156  Browser type Chrome is already installed
+00:00.172  TimeoutScope, 'TestCleanup', has been popped.
+00:00.172  Disposing AssemblyResolver instance for paths: {Tfs  True}, {Common7IDECommonExtTeamExp  False}
+00:00.172  
+          
+          Failure 1:  Evaluate.Fail failed. System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied.
+             at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+             at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+             at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+             at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+             at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+             at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.WebTestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 201
+             at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestCleanup() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 188
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestCleanup() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 285
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 215
+          Stack Trace:
+             at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 185</StdOut>
+        <ErrorInfo>
+          <Message>Initialization method MS.TF.Test.RM.Web.FunctionalTests.FunctionalTests.ArtifactPickerTests.TestInitializeInternal threw exception. System.UnauthorizedAccessException: System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Policies\Google\Chrome\ExtensionInstallForcelist' is denied..</Message>
+          <StackTrace>    at Microsoft.Win32.RegistryKey.Win32Error(Int32 errorCode, String str)
+   at Microsoft.Win32.RegistryKey.CreateSubKeyInternal(String subkey, RegistryKeyPermissionCheck permissionCheck, Object registrySecurityObj, RegistryOptions registryOptions)
+   at Microsoft.Win32.RegistryKey.CreateSubKey(String subkey, RegistryKeyPermissionCheck permissionCheck)
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.ChromeExtensionManager.InstallExtension(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 636
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.BrowserExtensionManager.EnsureExtensionIsInstalledAndEnabled(JScriptAgent agent) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\BrowserExtensionManager.cs:line 41
+   at MS.TF.Test.Web.AutomationFramework.JScriptAgent.JScriptAgentProvider.CreateNewAgent(WebBrowserType browserType, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\JScriptAgent\JScriptAgentProvider.cs:line 98
+   at MS.TF.Test.Web.AutomationFramework.WebAgentFactory.GetAgent(WebBrowserType browserType, Boolean setAsCurrentAgent, IJScriptExecutor executor) in C:\_work\1\s\TestFramework\Libraries\Web\AutomationFramework\Common\WebAgentFactory.cs:line 143
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.GetAgent(WebBrowserType browserType, Boolean closeExistingBrowserWindows, IJScriptExecutor executor) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 438
+   at MS.TF.Test.Tfs.Web.Core.Common.WebFrameworkAgentConfiguration.get_DefaultAgent() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\Configuration\WebFrameworkAgentConfiguration.cs:line 79
+   at MS.TF.Test.Tfs.Web.Core.Common.WebUITestSuiteBase.TestInitialize(Boolean invokeWebTestInit) in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\WebUITestSuiteBase.cs:line 122
+   at MS.TF.Test.Tfs.Web.Core.Common.TfsWebUITestSuiteBase.TestInitialize() in C:\_work\1\s\Tfs\Tests\Common\Libraries\TfsWeb\Core\Common\TfsWebUITestSuiteBase.cs:line 266
+   at Common.TestFramework.Legacy.Tra.TraTestBaseHelper.TestInitialize() in C:\_work\1\s\TestFramework\Libraries\TRA\TraTestBaseHelper.cs:line 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="CreateReleaseDefinitionAndTriggerRelease" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="6054fcf7-b60e-7ce3-51c3-e7faf1e77a0b">
+      <Owners>
+        <Owner name="nagarajg" />
+      </Owners>
+      <Execution id="70b15f79-46e1-4dac-bf2f-f2d877bf5cc0" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="CreateReleaseDefinitionAndTriggerRelease" />
+    </UnitTest>
+    <UnitTest name="TriggerReleaseAndValidateLiveLogs" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="244deb55-bf7f-7403-95c7-28f36506c139">
+      <Owners>
+        <Owner name="savenkat" />
+      </Owners>
+      <Execution id="b7e93983-68d4-4e81-8bdc-a2a9ede7e028" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="TriggerReleaseAndValidateLiveLogs" />
+    </UnitTest>
+    <UnitTest name="ValidateTestResultsReportInRelease" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="1" id="610b119c-60ec-a187-bab4-194852d8252a">
+      <Owners>
+        <Owner name="satishc" />
+      </Owners>
+      <Execution id="09c8339c-cf74-44ac-b56a-cb45c28a2bb4" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="ValidateTestResultsReportInRelease" />
+    </UnitTest>
+    <UnitTest name="ApproveAnApprovalInReleaseTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="1" id="c9aca54b-76bd-5535-8bb2-eda60aba1752">
+      <Owners>
+        <Owner name="madhuv" />
+      </Owners>
+      <Execution id="3321c58a-ba36-46df-bfcb-4f5f505103ff" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="ApproveAnApprovalInReleaseTest" />
+    </UnitTest>
+    <UnitTest name="CreateReleaseDefinitionEditPermissionsTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="fe6009e1-ca3b-7dab-6eae-7a1a38ce744e">
+      <Owners>
+        <Owner name="nagarajg" />
+      </Owners>
+      <Execution id="588a51f4-8eed-4693-9280-49d622e0171e" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="CreateReleaseDefinitionEditPermissionsTest" />
+    </UnitTest>
+    <UnitTest name="CreateReleaseDefinitionWithSecretVariablesTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="10bfe2d8-a5dc-4ef4-5093-a922dcb51b13">
+      <Owners>
+        <Owner name="nagarajg" />
+      </Owners>
+      <Execution id="a9652f65-2ddd-48e1-a8f8-8cdefeaf25d2" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="CreateReleaseDefinitionWithSecretVariablesTest" />
+    </UnitTest>
+    <UnitTest name="DynamicDropdownAzureServiceConnectionTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="e5c27335-3bf1-b69d-687a-4474d6f4b458">
+      <Owners>
+        <Owner name="nagarajg" />
+      </Owners>
+      <Execution id="441aeb35-602d-4e95-a300-966debabfcad" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="DynamicDropdownAzureServiceConnectionTest" />
+    </UnitTest>
+    <UnitTest name="DeployPopupInReleaseSummaryPageTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="aeaffe61-40f6-6661-5923-66e5d64894ac">
+      <Owners>
+        <Owner name="lovak" />
+      </Owners>
+      <Execution id="c388474c-f61c-49e4-bf13-638f1ff97cd4" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="DeployPopupInReleaseSummaryPageTest" />
+    </UnitTest>
+    <UnitTest name="ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="01dbea9d-31f0-9bbd-2947-a4790768bd0d">
+      <Owners>
+        <Owner name="satyasri" />
+      </Owners>
+      <Execution id="40d1670d-104e-4945-8535-2c31077d9bf1" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests" name="ReleaseRDWithMultipleEnvironmentsAndEnvironmentVariablesTest" />
+    </UnitTest>
+    <UnitTest name="ArtifactPickerE2ETest" storage="c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll" priority="0" id="6d78c496-4905-c1b4-c2da-6645dd546d2a">
+      <Owners>
+        <Owner name="chperich" />
+      </Owners>
+      <Execution id="3566ff73-e666-4607-b928-091a35e48777" />
+      <TestMethod codeBase="C:\temp\Tests\MS.TF.Test.RM.Web.FunctionalTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="MS.TF.Test.RM.Web.FunctionalTests.FunctionalTests.ArtifactPickerTests" name="ArtifactPickerE2ETest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6054fcf7-b60e-7ce3-51c3-e7faf1e77a0b" executionId="70b15f79-46e1-4dac-bf2f-f2d877bf5cc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="244deb55-bf7f-7403-95c7-28f36506c139" executionId="b7e93983-68d4-4e81-8bdc-a2a9ede7e028" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="610b119c-60ec-a187-bab4-194852d8252a" executionId="09c8339c-cf74-44ac-b56a-cb45c28a2bb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9aca54b-76bd-5535-8bb2-eda60aba1752" executionId="3321c58a-ba36-46df-bfcb-4f5f505103ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe6009e1-ca3b-7dab-6eae-7a1a38ce744e" executionId="588a51f4-8eed-4693-9280-49d622e0171e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10bfe2d8-a5dc-4ef4-5093-a922dcb51b13" executionId="a9652f65-2ddd-48e1-a8f8-8cdefeaf25d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5c27335-3bf1-b69d-687a-4474d6f4b458" executionId="441aeb35-602d-4e95-a300-966debabfcad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aeaffe61-40f6-6661-5923-66e5d64894ac" executionId="c388474c-f61c-49e4-bf13-638f1ff97cd4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01dbea9d-31f0-9bbd-2947-a4790768bd0d" executionId="40d1670d-104e-4945-8535-2c31077d9bf1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d78c496-4905-c1b4-c2da-6645dd546d2a" executionId="3566ff73-e666-4607-b928-091a35e48777" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="10" executed="10" passed="0" failed="10" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'TestEnvironment.xml' specified by the test 'MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TriggerReleaseAndValidateLiveLogs' cannot be deployed to 'TestEnvironment.xml' because otherwise the file 'c:\temp\tests\TestEnvironment.xml' would overwrite deployment item 'TestEnvironment\TwaOnPrem\TestEnvironment.xml' specified by the test settings.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.IdentityModel.Clients.ActiveDirectory' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Threading.Tasks' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Newtonsoft.Json' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.WindowsAzure.Storage' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'System.IdentityModel.Tokens.Jwt' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'System.Web.Http' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.7849592-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'System.Web.Http.WebHost' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'System.Web.WebPages' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Azure.ResourceManager' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Azure.Management.Redis' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.WindowsAzure.Management.Sql' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Azure.Management.Storage' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'StashProxy' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.ServiceBus' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Data.Services.Client' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.Azure.ActiveDirectory.GraphClient.FirstParty' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.ServiceModel.Web' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.WindowsAzure.Management.Compute' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.WindowsAzure.Management' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.WindowsAzure.Management.Storage' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Cloud.WebApi' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'MDLog' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Identity' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Telemetry' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Work.WebApi' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Integration' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Shell.15.0' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Gallery.Types.Server' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Server.WebAccess.Reporting' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Agile.Server' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'LibGit2Sharp' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.TestPlatform.ObjectModel' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.TestPlatform.Client' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.TestPlatform.Utilities' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.ProjectManagement' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Controls' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.TeamFoundation' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.TeamFoundation.SharePointReporting' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.ExtensibilityHosting' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.TeamFoundation.WorkItemTracking' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.DeleteTeamProject' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.Server.WebAccess.Agile' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.TeamFoundation.WorkItemTracking.Controls' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Commerce' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Account' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Profile' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8005845-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Marketing' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8162105-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.Licensing' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8162105-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.OrganizationTenant' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8162105-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Microsoft.VisualStudio.Services.SharedPlatform' directly or indirectly referenced by the test container 'c:\temp\tests\ms.tf.test.rm.web.functionaltests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="RM-NEB-AGENT1" outcome="Warning" timestamp="2016-03-01T01:20:47.8162105-08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'AjaxView.Config' directly or indirectly referenced by deployment item 'Web' (output directory 'Web') specified by the test 'MS.TF.Test.RM.Web.FunctionalTests.RMReleaseTests.TriggerReleaseAndValidateLiveLogs' was not found.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
