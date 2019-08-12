@@ -1,6 +1,6 @@
 1a, 1b
 2a, 2b
-3a,     
+3a, 3b
 
 # TestRepo
 test1
